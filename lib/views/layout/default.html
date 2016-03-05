@@ -13,15 +13,39 @@
     {{{content}}}
     <div id="content"></div>
     <script type="text/babel">
-      var CommentBox = React.createClass({
-      render: function() {
-        return (
-          <div className="commentBox">
-            Hello, world! I am a CommentBox.
-          </div>
-        );
-      }
-      });
+
+     let CommentForm = React.createClass({
+       render: function() {
+         return (
+           <div className='commentForm'>
+            This is the form to post a comment
+           </div>
+         )
+       }
+     })
+
+     let CommentList = React.createClass({
+       render: function() {
+         return (
+           <div className="commentList">
+             This is the comment list
+            </div>
+         )
+       }
+     })
+
+      let CommentBox = React.createClass({
+        render: function() {
+          return (
+            <div className='CommentBox'>
+              <h1>Comments</h1>
+              <CommentList />
+              <CommentForm />
+            </div>
+          )
+        }
+      })
+
       ReactDOM.render(
       <CommentBox />,
       document.getElementById('content')
